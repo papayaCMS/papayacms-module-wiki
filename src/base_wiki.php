@@ -14,7 +14,7 @@
 *
 * @package Papaya-Modules
 * @subpackage Beta-Wiki
-* @version $Id: base_wiki.php 39561 2014-03-14 15:10:45Z weinert $
+* @version $Id: base_wiki.php 40037 2015-11-29 09:52:01Z kersken $
 */
 
 /**
@@ -1233,6 +1233,10 @@ class base_wiki extends base_db {
     }
     */
     return $result;
+  }
+
+  public function lastAbsCount() {
+    return $this->lastAbsCount;
   }
 }
 

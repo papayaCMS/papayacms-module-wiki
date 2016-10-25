@@ -203,7 +203,7 @@ class content_wiki_index extends base_content {
         $offset
       );
       if (!empty($categories)) {
-        $numCategories = $this->baseWiki->lastAbsCount;
+        $numCategories = $this->baseWiki->lastAbsCount();
         $result .= sprintf(
           '<categories caption="%s">',
           papaya_strings::escapeHTMLChars($this->data['caption_categories'])
@@ -242,7 +242,7 @@ class content_wiki_index extends base_content {
         $offset
       );
       $result .= $this->getArticlePaging(
-        $this->baseWiki->lastAbsCount,
+        $this->baseWiki->lastAbsCount(),
         $offset,
         $this->data['mode'],
         $letter
